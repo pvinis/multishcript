@@ -1,0 +1,26 @@
+#!./runner.clj
+
+# #!/usr/bin/env msh
+
+
+# Comment in multishcript.
+
+
+# Starting a line with ```X will function as a shebang.
+# For example:
+# Starting with ```bash
+# will function as if you had #!/usr/bin/env bash
+# in a file.
+
+```bash
+echo wow
+```
+
+```ruby
+puts lol
+```
+
+```js
+console.log("from js")
+```
+
