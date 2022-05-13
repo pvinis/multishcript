@@ -19,12 +19,12 @@
 (defn group-blocks
   [acc next]
 
-  (case next
-    "```bash" (conj acc [next])
-    "```" (let [new-array (conj (last acc) next)]
-            (conj (vec (drop-last acc)) new-array))
-    (let [new-array (conj (last acc) next)]
-      (conj (vec (drop-last acc)) new-array))))
+  (cond
+    (re-matches #"```.+" next) (conj acc [next])
+    (= next "```") (let [new-array (conj (last acc) next)]
+                     (conj (vec (drop-last acc)) new-array))
+    :else (let [new-array (conj (last acc) next)]
+            (conj (vec (drop-last acc)) new-array))))
 
 ;; (pprint (reduce group-blocks [] '("```bash" "wow" "```" "```bash" "yes" "```")))
 
