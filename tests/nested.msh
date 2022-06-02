@@ -1,18 +1,23 @@
 #!/usr/bin/env msh
 
 
+### dont allow ___msh, because this will fuck up things? loop or recursive or something.
+
+
 ### i should have a second delimiter, in case a lang uses the first one, like ```, and then maybe also +_ or something
 ### vscode plugin to show which block of code im in. which lang, or no lang.
 
 
 
 ___js
-if (process.env === true) {
-
+if (process.env.CI === true) {
 ___bash
-	./scripts/setup-distribute
+	echo "we are in CI"
 ___
-
+} else {
+___bash
+	echo "no CI over here"
+___
 }
 ___
 
@@ -20,23 +25,15 @@ ___
 ### is inlining even possible? if not, lets fine a pattern, to do an if in one lang, and conditionally call another block
 ### maybe it could be like:
 ___js
-return process.env === true
+return process.env.CI === true
 ___ >inCI
 
 if inCI {
 ___bash
-	./scripts/setup-distribute
+	echo "we are in CI"
+___
+} else {
+___bash
+	echo "no CI over here"
 ___
 }
-
-
-
-
-
-
-```bash
-aws s3 cp s3://artsy-citadel/eigen/google-services.json android/app/google-services.json
-aws s3 cp s3://artsy-citadel/eigen/GoogleService-Info.plist GoogleService-Info.plist
-
-./scripts/download-fonts
-```

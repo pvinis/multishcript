@@ -1,0 +1,6 @@
+#!/usr/bin/env msh
+
+
+___bash
+CI=false ./scripts/setup-distribute
+___

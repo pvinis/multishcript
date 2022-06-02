@@ -4,5 +4,5 @@
 ___bash
 ls
 ___ | ___bash
-echo
+cat
 ___

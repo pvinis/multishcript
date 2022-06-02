@@ -1,0 +1,8 @@
+#!/usr/bin/env msh
+
+
+### inline block?
+
+___bash aws s3 cp .env.shared s3://artsy-citadel/dev/.env.eigen
+
+___js console.log(chalk.red("⚠️  Don't forget to update on 1Password and CircleCI too!  ⚠️"))
