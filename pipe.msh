@@ -1,0 +1,8 @@
+#!/usr/bin/env msh
+
+
+___bash
+ls
+___ | ___bash
+echo
+___

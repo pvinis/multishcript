@@ -1,0 +1,16 @@
+#!/usr/bin/env msh
+
+
+___bash
+ls
+___ >mid
+
+___bash mid
+echo "below should be the output of the first script!"
+echo $1
+___
+
+___js mid
+console.log("below should be the output of the first script as well!"
+console.log(process.argv[1])
+___
