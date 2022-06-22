@@ -12,15 +12,22 @@
 # will function as if you had #!/usr/bin/env bash
 # in a file.
 
+
 ```bash
-echo wow
+echo from bash
+ls +++++
 ```
 
 ```ruby
-puts lol
++++++.map()
+puts 'from ruby'
 ```
 
 ```js
 console.log("from js")
 ```
 
+
+# - finishn the  codeblocks
+# - make scripts and run them
+# - figure out input/output between blocks

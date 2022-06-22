@@ -19,22 +19,20 @@
 (defn group-blocks
   [acc next]
 
-  (cond
-    (re-matches #"```.+" next) (conj acc [next])
-    :else (let [new-array (conj (last acc) next)]
-            (conj (vec (drop-last acc)) new-array))))
+  (let [lang (last (re-matches #"```(.+)" next))]
+    (cond
+      (some? lang) (conj acc {:lang lang :code []})
+      (= next "```") acc
+      :else (let [new-code (conj (:code (last acc)) next)
+                  new-map (assoc (last acc) :code new-code)]
+              (conj (vec (drop-last acc)) new-map)))))
 
-;; (pprint (reduce group-blocks [] '("```bash" "wow" "```" "```bash" "yes" "```")))
+(def codeblocks
+  (->> lines
+       (remove #(= "" %))
+       (remove #(string/starts-with? % "#"))
+       (reduce group-blocks [])))
 
-(->> lines
-     (remove #(= "" %))
-     (remove #(string/starts-with? % "#"))
-     (reduce group-blocks [])
-     pprint)
-
-;; (def codeblocks [])
-
-;; (with-open [rdr (open-file file)]
-;;   (println "ok"))
+(map make-)
 
 ;;;; checks? what if i dont close with ```, or if i detect an opening ```?
