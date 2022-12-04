@@ -10,7 +10,25 @@ echo "below should be the output of the first script!"
 echo $1
 ___
 
+
+# anything that returns, lives in an envvar, that the next can read
+
+# have a json return obj, maybe keep the output, or the time it took, etc
+
+
 ___js mid
 console.log("below should be the output of the first script as well!"
 console.log(process.argv[1])
 ___
+
+
+
+
+
+/temp/sc1 mid
+
+#!/
+
+
+echo "below should be the output of the first script!"
+echo $1

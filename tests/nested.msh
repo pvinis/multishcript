@@ -11,9 +11,9 @@
 
 ___js
 if (process.env.CI === true) {
-___bash
+    ___bash
 	echo "we are in CI"
-___
+    ___
 } else {
 ___bash
 	echo "no CI over here"
