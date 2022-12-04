@@ -33,6 +33,6 @@
        (remove #(string/starts-with? % "#"))
        (reduce group-blocks [])))
 
-(map make-)
+;; (map make-)
 
 ;;;; checks? what if i dont close with ```, or if i detect an opening ```?

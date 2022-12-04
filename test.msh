@@ -1,33 +1,8 @@
-#!./runner.clj
-
-# #!/usr/bin/env msh
+#!/usr/bin/env msh
 
 
-# Comment in multishcript.
+___bash
+curl https://echo.artsy.net/Echo.json > ./Artsy/App/EchoNew.json
+yarn prettier -w Artsy/App/EchoNew.json
+___
 
-
-# Starting a line with ```X will function as a shebang.
-# For example:
-# Starting with ```bash
-# will function as if you had #!/usr/bin/env bash
-# in a file.
-
-
-```bash
-echo from bash
-ls +++++
-```
-
-```ruby
-+++++.map()
-puts 'from ruby'
-```
-
-```js
-console.log("from js")
-```
-
-
-# - finishn the  codeblocks
-# - make scripts and run them
-# - figure out input/output between blocks

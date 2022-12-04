@@ -1,0 +1,17 @@
+{
+  "name": "multishcript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:pvinis/multishcript.git",
+  "author": "Pavlos Vinieratos <pvinis@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "@types/node": "^18.11.10",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "remeda": "^1.3.0",
+    "ts-node": "^10.9.1"
+  }
+}

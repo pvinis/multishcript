@@ -1,0 +1,7 @@
+#!/usr/bin/env msh
+
+
+___bash
+curl https://www.artsy.net > ./artsy.html
+tail -n 1 artsy.html
+___
