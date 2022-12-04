@@ -2,7 +2,6 @@
 
 
 ___bash
-curl https://echo.artsy.net/Echo.json > ./Artsy/App/EchoNew.json
-yarn prettier -w Artsy/App/EchoNew.json
+curl https://www.artsy.net > ./artsy.html
+tail -n 1 artsy.html
 ___
-
