@@ -1,0 +1,15 @@
+{
+  "version": "2",
+  "remote": {},
+  "npm": {
+    "specifiers": {
+      "remeda@1.24.0": "remeda@1.24.0"
+    },
+    "packages": {
+      "remeda@1.24.0": {
+        "integrity": "sha512-tjLxwU4yLtvX8yHlePnE7CdQXRe2pKatlVY+AunqAQV5t9FNw1yuiIAqKpu6zevd+No5LQHEJ/HK3r3ZFK7KXg==",
+        "dependencies": {}
+      }
+    }
+  }
+}

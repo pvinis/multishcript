@@ -1,18 +1,15 @@
 #!/usr/bin/env bb
 
+(ns multishcript.main
+  (:require [clojure.string :as string]
+            [multishcript.guards :refer [guard-args guard-file-exists]]))
 
-(require '[babashka.fs :as fs])
-(require '[clojure.string :as string])
-
-(when (not= 1 (count *command-line-args*))
-  (println "Only use one arg, with the path to the multishcript you want to run.")
-  (System/exit 1))
+(guard-args *command-line-args*)
 
 (def file (first *command-line-args*))
+(guard-file-exists file)
 
-(when (not (fs/exists? file))
-  (println "Multishcript file doesn't exist.")
-  (System/exit 1))
+(print file)
 
 (def lines (fs/read-all-lines file))
 
