@@ -1,0 +1,21 @@
+#!/usr/bin/env msh
+
+# Comment in multishcript.
+
+
+```bash
+echo "from bash"
+```
+
+```ruby
+puts 'from ruby'
+```
+
+```node
+console.log("from js")
+console.log("nice!")
+```
+
+```python
+print("from python")
+```

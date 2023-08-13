@@ -3,9 +3,14 @@
   "remote": {},
   "npm": {
     "specifiers": {
+      "async@3.2.4": "async@3.2.4",
       "remeda@1.24.0": "remeda@1.24.0"
     },
     "packages": {
+      "async@3.2.4": {
+        "integrity": "sha512-iAB+JbDEGXhyIUavoDl9WP/Jj106Kz9DEn1DPgYw5ruDn0e3Wgi3sKFm55sASdGBNOQB8F59d9qQ7deqrHA8wQ==",
+        "dependencies": {}
+      },
       "remeda@1.24.0": {
         "integrity": "sha512-tjLxwU4yLtvX8yHlePnE7CdQXRe2pKatlVY+AunqAQV5t9FNw1yuiIAqKpu6zevd+No5LQHEJ/HK3r3ZFK7KXg==",
         "dependencies": {}
