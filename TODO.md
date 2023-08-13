@@ -1,2 +1,0 @@
-- checks? what if i dont close with ` ``` `, or if i detect an opening ` ``` `?
-- make a command to install the current version, and uninstall it for normal usage

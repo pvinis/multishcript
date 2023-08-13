@@ -1,5 +1,5 @@
 import { guardArgs, guardFileExists } from "./guards.ts"
-import { pipe, map, filter, reduce, forEach } from "npm:remeda@1.24.0"
+import { filter, forEach, map, pipe, reduce } from "npm:remeda@1.24.0"
 import { COMMENT_START, DELIMITERS } from "./tokens.ts"
 import { eachSeries } from "npm:async@3.2.4"
 type Codeblock = {
@@ -35,7 +35,8 @@ const ensureTmpDirExists = () => {
 	}
 }
 
-///// ;;; checks? what if i dont close with ```, or if i detect an opening ```?
+///// - checks? what if i dont close with ` ``` `, or if i detect an opening ` ``` `?
+///// - make a command to install the current version, and uninstall it for normal usage
 
 const main = async () => {
 	guardArgs(Deno.args)
