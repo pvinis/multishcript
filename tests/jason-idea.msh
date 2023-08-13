@@ -1,0 +1,30 @@
+function bash readData() {{
+    cat ~/data.txt
+}}
+
+function python prefixLines(prefix) {{
+    import sys
+    return [prefix + line for line in sys.argv]
+}}
+
+function javascript output() {{
+    process.stdin.on('data', data => {
+        console.log(`${data.toString()}`);
+        process.exit();
+    });
+}}
+
+readData() | prefixLines("data: ") | output()
+
+
+bash {{
+    cat ~/data.txt
+}} | python (prefix) {{
+    import sys
+    return [prefix + line for line in sys.argv]
+}} | javascript {{
+    process.stdin.on('data', data => {
+        console.log(`${data.toString()}`);
+        process.exit();
+    });
+}}
